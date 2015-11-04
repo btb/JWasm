@@ -40,7 +40,7 @@ $(OUTD):
 
 $(OUTD)/$(TARGET1) : $(OUTD)/main.o $(proj_obj)
 ifeq ($(DEBUG),0)
-	$(CC) $(OUTD)/main.o $(proj_obj) -s -o $@ -Wl,-Map,$(OUTD)/$(TARGET1).map
+	$(CC) $(OUTD)/main.o $(proj_obj) -s -o $@
 else
 	$(CC) $(OUTD)/main.o $(proj_obj) -o $@ -Wl,-Map,$(OUTD)/$(TARGET1).map
 endif
